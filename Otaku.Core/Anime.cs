@@ -8,6 +8,16 @@ namespace Otaku.Core
         public string Nombre { get; set; }
         public List<Anime> Animes { get; set; }
 
+        public Anime()
+        {
+            Animes = new List<Anime>();
+        }
+
+        public void AgregarAnime(Anime animes)
+            => Anime.Add(animes);
+
+
+
         
     }
 }
