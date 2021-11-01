@@ -7,6 +7,7 @@ namespace Otaku.Core
         public int Id { get; set; }
         public string Nombre { get; set; }
         public List<Anime> Animes { get; set; }
+        public string Genero {  get; set;  }
 
         public Anime()
         {
