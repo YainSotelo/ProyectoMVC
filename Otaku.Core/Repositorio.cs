@@ -6,9 +6,9 @@ namespace Otaku.Core
 {
     public static class Repositorio
     {
-        static int idGenero  = 1;
-        static int idAnime =1;
-        static int idCapitulos =1;
+        static int idGenero = 1;
+        static int idAnime = 1;
+        static int idCapitulos = 1;
         static readonly List<Capitulo> Capitulo = new List<Capitulo>();
         #region Capitulo
         public static IEnumerable<Capitulo> capitulos
@@ -25,12 +25,13 @@ namespace Otaku.Core
         #region Genero
 
         static readonly List<Genero> generos = new List<Genero>();
-         public static void AgregarGenero(Genero generos)
+        public static void AgregarGenero(Genero genero)
         {
-                generos.Id = idGenero++;
+            genero.Id = idGenero++;
+            generos.Add(genero);
         }
-         public static Genero GetGenero(int id)
-            => generos.Find(g => g.id == id);
+        public static Genero GetGenero(int id)
+           => generos.Find(g => g.id == id);
 
         #endregion
 
