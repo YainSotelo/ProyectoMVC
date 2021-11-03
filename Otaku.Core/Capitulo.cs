@@ -12,10 +12,11 @@ namespace Otaku.Core
 
         public string Descripcion {get;set;}
 
-        public datatime FechaEstreno {get;set;} 
+        public DateTime FechaEstreno {get;set;}
 
-        
-
-        
+        internal static void Add(Capitulo capitulo)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
