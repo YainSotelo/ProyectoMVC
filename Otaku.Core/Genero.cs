@@ -20,9 +20,6 @@ namespace Otaku.Core
         public void AgregarAnime(Anime animes)
             => Anime.Add(animes);
 
-        internal static Genero Find(Func<object, bool> p)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

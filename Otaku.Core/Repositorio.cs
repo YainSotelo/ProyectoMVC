@@ -9,34 +9,45 @@ namespace Otaku.Core
         static int idGenero = 1;
         static int idAnime = 1;
         static int idCapitulos = 1;
-        static readonly List<Capitulo> Capitulo = new List<Capitulo>();
+
         #region Capitulo
-        public static IEnumerable<Capitulo> capitulos
-        => capitulos;
+        static readonly List<Capitulo> Capitulos = new List<Capitulo>();
+        public static IEnumerable<Capitulo> Capitulos
+        => Capitulos;
         public static Capitulo GetCapitulo(int id)
             => Capitulo.Find(c => c.Id == id);
-        public static void AgregarCapitulo(Capitulo capitulo)
+        public static void AgregarCapitulo(Capitulo Capitulo)
         {
-            capitulo.Id = idCapitulos++;
-            Capitulo.Add(capitulo);
+            Capitulo.Id = idCapitulos++;
+            Capitulo.Add(Capitulo);
         }
         #endregion
 
         #region Genero
 
-        static readonly List<Genero> generos = new List<Genero>();
-        public static void AgregarGenero(Genero genero)
+        static readonly List<Genero> Generos = new List<Genero>();
+         public static IEnumerable<Genero> Generos
+        public static void AgregarGenero(Genero Genero)
         {
-            genero.Id = idGenero++;
-            generos.Add(genero);
+            Genero.Id = idGenero++;
+            Generos.Add(Genero);
         }
         public static Genero GetGenero(int id)
-           => generos.Find(g => g.id == id);
+           => Generos.Find(g => g.id == id);
 
         #endregion
 
         #region Anime
-        static readonly List<Anime> animes = new List<Anime>();
+        static readonly List<Anime> Animes = new List<Anime>();
+         public static IEnumerable<Anime> Animes
+        public static void AgregarAnime(Anime Animes)
+        {
+            Anime.Id = idAnime++;
+            Animes.Add(Anime);
+        }
+        public static Anime GetAnime(int id)
+           => Animes.Find(a => a.id == id);
+
 
         #endregion
     }
