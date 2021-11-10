@@ -1,0 +1,20 @@
+@model Otaku.Core.Genero
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Te fuiste a la b por pto y cagon</title>
+</head>
+<body>
+    <form asp-action="FormAlta" method="post">
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="Nombre">Generos</label>
+            <input asp-for="Nombre" />
+        </div>
+        <button type="submit">Alta Generos</button>
+    </form>
+</body>
+</html>

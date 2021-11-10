@@ -14,6 +14,5 @@ namespace Otaku.Core
 
         public DateTime FechaEstreno {get;set;}
 
-       
     }
 }
