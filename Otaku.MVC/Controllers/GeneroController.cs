@@ -1,5 +1,11 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Otaku.Core;
+using Microsoft.Extensions.Logging;
+using Otaku.MVC.Models;
 
 namespace Otaku.Controllers
 {
@@ -30,5 +36,4 @@ namespace Otaku.Controllers
             return View("Index", Repositorio.Generos);
         }
     }
-
 }
