@@ -1,6 +1,10 @@
-using System.Collections.Generic;
-using System.Linq;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Otaku.Core;
+
 
 namespace Otaku.Core
 {
@@ -11,42 +15,48 @@ namespace Otaku.Core
         static int idCapitulos = 1;
 
         #region Capitulo
-        static readonly List<Capitulo> Capitulos = new List<Capitulo>();
+        static readonly List<Capitulo> capitulos = new List<Capitulo>();
         public static IEnumerable<Capitulo> Capitulos
         => Capitulos;
-        public static Capitulo GetCapitulo(int id)
-            => Capitulo.Find(c => c.Id == id);
-        public static void AgregarCapitulo(Capitulo Capitulo)
+          public static void AgregarCapitulo(Capitulo Capitulo)
         {
             Capitulo.Id = idCapitulos++;
             Capitulo.Add(Capitulo);
         }
+
+        public static object GetProducto(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static Capitulo GetCapitulo(int Id)
+            => capitulos.Find(c =>c.Id == Id);
         #endregion
 
         #region Genero
 
-        static readonly List<Genero> Generos = new List<Genero>();
-         public static IEnumerable<Genero> Generos
+        static readonly List<Genero> generos = new List<Genero>();
+         public static IEnumerable<Genero> Generos;
         public static void AgregarGenero(Genero Genero)
         {
             Genero.Id = idGenero++;
-            Generos.Add(Genero);
+            generos.Add(Genero);
         }
         public static Genero GetGenero(int id)
-           => Generos.Find(g => g.id == id);
+           => generos.Find(g => g.id == id);
 
         #endregion
 
         #region Anime
-        static readonly List<Anime> Animes = new List<Anime>();
-         public static IEnumerable<Anime> Animes
+        static readonly List<Anime> animes = new List<Anime>();
+         public static IEnumerable<Anime> Animes;
         public static void AgregarAnime(Anime Animes)
         {
-            Anime.Id = idAnime++;
-            Animes.Add(Anime);
+            Anime.id = idAnime++;
+            Animes.Add(Animes);
         }
         public static Anime GetAnime(int id)
-           => Animes.Find(a => a.id == id);
+           => animes.Find(a => a.Id == id);
 
 
         #endregion

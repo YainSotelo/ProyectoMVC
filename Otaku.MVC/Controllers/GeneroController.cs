@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Otaku.Core;
 using Otaku.MVC.Models;
 
 namespace Otaku.Controllers
@@ -23,7 +24,7 @@ namespace Otaku.Controllers
             {
                 return NotFound();
             }
-            return View(Generos);
+            return View(Genero);
         }
 
         [HttpGet]

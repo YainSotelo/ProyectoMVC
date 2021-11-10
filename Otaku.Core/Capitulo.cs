@@ -14,5 +14,9 @@ namespace Otaku.Core
 
         public DateTime FechaEstreno {get;set;}
 
+        internal static void Add(Capitulo capitulo)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

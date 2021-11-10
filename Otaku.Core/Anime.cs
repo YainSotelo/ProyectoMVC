@@ -9,18 +9,22 @@ namespace Otaku.Core
 
         public string Nombre { get; set; }
 
-        public List<Anime> Animes { get; set; }
-
         public Genero Genero { get; set; }
+
+        public string Descripcion{get; set;}
 
         public Anime()
         {
-            Animes = new List<Anime>();
+            anime = new List<Anime>();
         }
 
         public void AgregarCapitulo(Capitulo capitulo)
             => Capitulo.Add(capitulo);
 
-    
+        internal void Add(Anime animes)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
