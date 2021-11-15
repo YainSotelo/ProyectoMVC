@@ -5,6 +5,8 @@ namespace Otaku.Core
 {
     public class Anime
     {
+        internal static int id;
+
         public int Id { get; set; }
 
         public string Nombre { get; set; }
@@ -12,19 +14,19 @@ namespace Otaku.Core
         public Genero Genero { get; set; }
 
         public string Descripcion{get; set;}
+        public List<Anime> Generos { get;set; }
 
         public Anime()
         {
-            anime = new List<Anime>();
+            Generos = new List<Anime>();
         }
 
         public void AgregarCapitulo(Capitulo capitulo)
             => Capitulo.Add(capitulo);
 
-        internal void Add(Anime animes)
+        internal static void Add(Anime animes)
         {
             throw new NotImplementedException();
         }
-
     }
 }

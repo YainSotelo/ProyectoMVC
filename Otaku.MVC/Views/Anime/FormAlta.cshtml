@@ -1,0 +1,20 @@
+@model Otaku.Core.Genero
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>One piece</title>
+</head>
+<body>
+    <form asp-action="FormAlta" method="post">
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="Nombre">Animes</label>
+            <input asp-for="Nombre" />
+        </div>
+        <button type="submit">Alta Animes</button>
+    </form>
+</body>
+</html>

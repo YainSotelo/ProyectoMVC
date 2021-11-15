@@ -6,8 +6,6 @@ namespace Otaku.Core
     public class Genero
     {
         private List<Anime> Anime;
-        internal int id;
-
         public int Id { get; set; }
 
         public string Nombre { get; set; }
@@ -19,7 +17,5 @@ namespace Otaku.Core
 
         public void AgregarAnime(Anime animes)
             => Anime.Add(animes);
-
-       
     }
 }

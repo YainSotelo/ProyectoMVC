@@ -43,7 +43,7 @@ namespace Otaku.Core
             generos.Add(Genero);
         }
         public static Genero GetGenero(int id)
-           => generos.Find(g => g.id == id);
+           => generos.Find(g => g.Id == id);
 
         #endregion
 
@@ -53,7 +53,7 @@ namespace Otaku.Core
         public static void AgregarAnime(Anime Animes)
         {
             Anime.id = idAnime++;
-            Animes.Add(Animes);
+            Anime.Add(Animes);
         }
         public static Anime GetAnime(int id)
            => animes.Find(a => a.Id == id);
