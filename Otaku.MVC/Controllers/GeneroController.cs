@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using Otaku.Core;
 using Otaku.MVC.Models;
 
-namespace Otaku.Controllers
+namespace Otaku.MVC.Controllers
 {
     public class GeneroController : Controller
     {

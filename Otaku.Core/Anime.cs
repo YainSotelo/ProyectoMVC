@@ -14,12 +14,8 @@ namespace Otaku.Core
         public Genero Genero { get; set; }
 
         public string Descripcion{get; set;}
-        public List<Anime> Generos { get;set; }
 
-        public Anime()
-        {
-            Generos = new List<Anime>();
-        }
+        public Anime(){}
 
         public void AgregarCapitulo(Capitulo capitulo)
             => Capitulo.Add(capitulo);

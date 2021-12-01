@@ -5,10 +5,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Otaku.ViewModels;
 using Otaku.MVC.Models;
 using Otaku.Core;
 
-namespace Otaku.Controllers
+
+namespace Otaku.MVC.Controllers
 {
     public class AnimeController : Controller
     {
@@ -29,14 +31,19 @@ namespace Otaku.Controllers
         }
 
         [HttpGet]
-        public IActionResult FormAlta() => View();
-
-        [HttpPost]
         public IActionResult FormAlta(Anime anime)
         {
             Repositorio.AgregarAnime(anime);
             return View("Index", Repositorio.Animes);
         }
+        
+        [HttpPost]
+          public IActionResult FormAlta(VMAnime vMAnime)
+        {
+            var genero = Repositorio.GetGenero(vMAnime.IdGeneroSeleccionado.Value);
+                genero.AgregarAnime(vMAnime.Anime);
+                Repositorio.AgregarAnime(vMAnime.Anime);
+        }   
     }
 }
 

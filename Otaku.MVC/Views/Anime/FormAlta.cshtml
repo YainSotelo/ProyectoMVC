@@ -1,20 +1,40 @@
-@model Otaku.Core.Genero
+@using Otaku.ViewModels;
+@using Otaku.Core;
+@model VMAnime;
 @{
     Layout = null;
 }
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>One piece</title>
 </head>
+
 <body>
     <form asp-action="FormAlta" method="post">
         <div asp-validation-summary="All"></div>
         <div>
-            <label asp-for="Nombre">Animes</label>
-            <input asp-for="Nombre" />
+            <label asp-for="@Model.Anime.Nombre">Nombre:</label>
+            <input asp-for="@Model.Anime.Nombre" />
         </div>
+        <div>
+            <label asp-for="@Model.Anime.Genero">Genero:</label>
+            <input asp-for="@Model.Anime.Genero">
+        </div>
+        <div>
+            <label asp-for="@Model.Anime.Descripcion">Descripcion:</label>
+            <input asp-for="@Model.Anime.Descripcion">
+        </div>
+        <select asp-for="IdGeneroSeleccionado">
+            <option value="">Elegi una opción</option>
+            @foreach (Genero genero in Model.generos)
+            {
+                <option value="@genero.Id">@genero.Nombre</option>
+            }
+        </select>
         <button type="submit">Alta Animes</button>
     </form>
 </body>
+
 </html>
