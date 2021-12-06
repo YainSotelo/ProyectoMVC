@@ -8,19 +8,19 @@ namespace Otaku.MVC.ViewModels
     {
         public IEnumerable<Genero> generos { get; set; }
 
-        public Anime anime { get; set; }
+        public Anime Anime { get; set; }
 
         public int? IdGeneroSeleccionado { get; set; }
 
-        public VMAnime() => anime= new Anime();
+        public VMAnime() => Anime= new Anime();
 
         public VMAnime(IEnumerable<Genero> Generos) : this()
 
             => generos = Generos;
 
-        public VMAnime(Anime anime)
+        public VMAnime(Anime Anime)
         {
-            Anime = anime;            
+            Anime = this.Anime;            
         }
     }
 }
