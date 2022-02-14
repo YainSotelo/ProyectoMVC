@@ -5,9 +5,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mercado Simple - Detalle @Model.Nombre</title>
+    <title>Detalle @Model.Nombre</title>
 </head>
+<body>
+    <h1>Detalle</h1>
     <div>
-        Nombre: @Model.Nombre<br>
-        Genero: @Model.Genero<br />
+        <h3>@Model.Nombre</h3>
+        Descripcion: @Model.Descripcion<br>
+        Genero: @Model.Genero<br>
     </div>
+    <button type="submit">
+    <a  asp-controller="Juego" asp-action="Index">atras </a>
+</button>
+</body>
+</html>

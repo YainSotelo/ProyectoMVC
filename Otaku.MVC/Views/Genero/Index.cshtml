@@ -3,18 +3,33 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genero</title>
-</head>
-<body>
-    @foreach (Otaku.Core.Genero Genero in Model)
+<html>
+    <body>
+<h1>Generos</h1>
+<table>
+    <thead>
+    <td>Nombre</td>
+    </thead>
+    <tbody>
+    @foreach (Otaku.Core.Genero genero in Model)
     {
-        
+        <tr>
+        <td>
+        <a asp-controller="Genero" asp-action="Detalle" asp-route-id="@genero.Id">@genero.Nombre</a> 
+        </td>
+        </tr>
     }
-</body>
+    </tbody>
+</table>
+<button type="submit">
+<div >
+    <a asp-action="FormAlta"> Ingresar Genero</a>
+</div>
+</button>
+<button type="submit">
+<div >
+    <a  asp-controller="home" asp-action="Index"> Inicio </a>
+</div>
+</button>
+    </body>
 </html>

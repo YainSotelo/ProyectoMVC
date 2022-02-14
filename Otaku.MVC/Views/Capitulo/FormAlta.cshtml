@@ -1,0 +1,32 @@
+@using Otaku.Core;
+@using Otaku.MVC.ViewModels;
+@model Otaku.Core.Capitulo;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>One piece</title>
+</head>
+
+<body>
+    <form asp-action="FormAlta" method="post">
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="@Model.Nombre">Nombre:</label>
+            <input asp-for="@Model.Nombre" />
+        </div>
+        <div>
+            <label asp-for="@Model.Descripcion">Descripcion:</label>
+            <input asp-for="@Model.Descripcion"/>
+        </div>
+        <div>
+            <label asp-for="@Model.Duracion">Duracion:</label>
+            <input asp-for="@Model.Duracion" />
+        </div>
+        <button type="submit">Alta Animes</button>
+    </form>
+</body>
+</html>

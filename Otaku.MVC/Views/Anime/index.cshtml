@@ -14,7 +14,17 @@
 <body>
     @foreach (Otaku.Core.Anime anime in Model)
     {
-        
+    <tr>
+            <td>
+                <a asp-controller="Anime" asp-action="Detalle" asp-route-id="@anime.Id">@anime.Nombre</a>
+            </td>
+     </tr>
     }
+    <button type="submit">
+       <a asp-action="FormAlta">Alta Anime</a>
+       </button>
+    <button type="submit">
+    <a asp-controller="Home" asp-action="Index"> atras </a>
+</button>
 </body>
 </html>

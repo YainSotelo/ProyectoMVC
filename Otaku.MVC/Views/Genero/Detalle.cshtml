@@ -1,0 +1,28 @@
+@model Otaku.Core.Genero
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html >
+<head>
+<title>Anime Detalle @Model.Nombre</title>
+</head>
+<body>
+<div>
+    <h1> Detalle </h1>
+</div>
+<table>
+    <thead>
+        <tr >
+            <td> Nombre: @Model.Nombre</td>
+        </tr>
+    </thead>
+</table>
+<button type="submit">
+    <div >
+    <a  asp-controller="Genero" asp-action="Index"> Volver atras </a>
+</div>
+</button>
+</body>
+</html>

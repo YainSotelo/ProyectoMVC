@@ -14,7 +14,10 @@
             <label asp-for="Nombre">Generos</label>
             <input asp-for="Nombre" />
         </div>
-        <button type="submit">Alta Generos</button>
+        <button type="submit">Generos+</button>
+        <button type="submit">
+        <a  asp-controller="Genero" asp-action="Index"> Volver atras </a>
+        </button>
     </form>
 </body>
 </html>
